@@ -1,4 +1,4 @@
-def ifInteger(x):
+def ifWholeNum(x):
     temp = int(x)
     if abs(x-temp) == 0:
         return True
@@ -9,8 +9,8 @@ while test < 2**64:
     count = 0
     power = 2
     while count < 2 and power < 64:
-        #     ifInteger( test ** (1./ power) )
-        if ifInteger( test ** (1./ power) ):
+        #     ifInteger( test ** (1./ power) ) check if test^(1/n) is a whole number  thus test^n exists
+        if ifWholeNum( test ** (1./ power) ):
             count += 1
         power += 1
     if count == 2:
